@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0077ff">
+  <title>VK × MAX — промо-концепт</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230077ff'/%3E%3Ctext x='50%25' y='53%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-size='28' font-weight='700' fill='white'%3EVK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --blue: #0077ff;
+      --blue-dark: #0066d9;
+      --text: #17212b;
+      --muted: #7b8794;
+      --bg: #f4f7fa;
+      --card: rgba(255,255,255,.88);
+      --border: rgba(18, 32, 47, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% 20%, rgba(0,119,255,.11), transparent 35%),
+        var(--bg);
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 24px 0;
+      display: flex;
+      justify-content: center;
+      animation: fadeDown .6s ease both;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -.3px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--blue);
+      font-size: 13px;
+      box-shadow: 0 8px 22px rgba(0,119,255,.22);
+    }
+
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: auto;
+      padding: 48px 0 56px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(0,119,255,.08);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 650;
+      margin-bottom: 24px;
+      animation: fadeUp .7s .05s ease both;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #31b26f;
+      box-shadow: 0 0 0 4px rgba(49,178,111,.12);
+    }
+
+    h1 {
+      max-width: 700px;
+      margin: 0 auto 18px;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: .98;
+      letter-spacing: -3px;
+      font-weight: 800;
+      animation: fadeUp .7s .12s ease both;
+    }
+
+    .accent {
+      color: var(--blue);
+    }
+
+    .description {
+      max-width: 590px;
+      margin: 0 auto 34px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+      animation: fadeUp .7s .2s ease both;
+    }
+
+    .card {
+      position: relative;
+      margin: 0 auto;
+      padding: 30px;
+      max-width: 610px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 24px 70px rgba(28, 45, 64, .10);
+      backdrop-filter: blur(16px);
+      animation: fadeUp .7s .28s ease both;
+    }
+
+    .cta {
+      width: 100%;
+      border: 0;
+      border-radius: 17px;
+      padding: 19px 26px;
+      color: white;
+      background: var(--blue);
+      font: inherit;
+      font-size: 18px;
+      font-weight: 750;
+      cursor: pointer;
+      box-shadow: 0 13px 30px rgba(0,119,255,.25);
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .cta:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 17px 36px rgba(0,119,255,.30);
+    }
+
+    .cta:active { transform: translateY(0); }
+
+    .hint {
+      margin: 15px 0 0;
+      color: #9aa5af;
+      font-size: 12px;
+    }
+
+    footer {
+      padding: 0 20px 24px;
+      text-align: center;
+      color: #a0aab4;
+      font-size: 11px;
+      line-height: 1.5;
+      animation: fadeUp .7s .4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 18px 0; }
+      main { padding: 35px 0 42px; }
+      h1 { letter-spacing: -2px; font-size: clamp(40px, 12vw, 58px); }
+      .description { font-size: 16px; }
+      .card { padding: 20px; border-radius: 23px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand" aria-label="VK × MAX">
+      <span class="brand-mark">VK</span>
+      <span>VK × MAX</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="badge"><span class="dot"></span> Специальное предложение</div>
+
+    <h1>VK Премиум<br><span class="accent">на 1 год — бесплатно</span></h1>
+
+    <p class="description">
+      В рамках промо-концепта коллаборации VK и мессенджера MAX
+      пользователи могут получить VK Премиум бесплатно на 12 месяцев.
+    </p>
+
+    <section class="card">
+      <button class="cta" id="cta">Получить VK Премиум</button>
+      <p class="hint">Нажимая кнопку, вы перейдёте на страницу продолжения.</p>
+    </section>
+  </main>
+
+  <footer>
+    Демонстрационный промо-концепт. Это не официальный сайт VK или MAX.
+  </footer>
+
+  <script>
+    // ЗАМЕНИТЕ ЭТУ ССЫЛКУ НА НУЖНУЮ:
+    const REDIRECT_URL = "https://example.com/redirect";
+
+    document.getElementById("cta").addEventListener("click", () => {
+      window.location.href = REDIRECT_URL;
+    });
+  </script>
+</body>
+</html>
